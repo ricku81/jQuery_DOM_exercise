@@ -84,14 +84,20 @@
   $('ol').empty();
   $('ol').append('<p>I am sorry for this list. Its existence is questionable.</p>');
 
-  
-
   // changes Body background-color based off of Input values
-  const changeBodyColor = () => $('body').css('background-color',`rgb(
+  // const changeBodyColor = () => $('body').css('background-color',`rgb(
+  //   ${$('input').eq(0).val()},
+  //   ${$('input').eq(1).val()},
+  //   ${$('input').eq(2).val()}
+  //   )`);
+
+  $('input').on('change',()=>{
+    $('body').css('background-color',`rgb(
     ${$('input').eq(0).val()},
     ${$('input').eq(1).val()},
     ${$('input').eq(2).val()}
     )`);
+  })
 </script>
 </body>
 
